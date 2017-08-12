@@ -2,10 +2,10 @@ require("dotenv").config();
 var mongoose = require('mongoose');
 mongoose.connect(process.env.MONGODB_URI);
 
-var Daily = require('../models/Daily');
-var Technique = require('../models/Technique');
-var Task = require('../models/Task');
-var Tech = require('../models/Tech');
+var Daily = require('../models/daily');
+var Technique = require('../models/technique');
+var Task = require('../models/task');
+var Tech = require('../models/tech');
 
 mongoose.Promise = global.Promise;
 
@@ -68,18 +68,12 @@ const leave = new Tech({
   Time: "Medium"
 });
 
-
-
-
-
 const example = new Daily({
   name: "Example Routine",
-  Dailies: [wash, eat, tidy, pets]
+  Tasks: [wash, eat, tidy, pets]
 });
 
-
-
-
 example.save().then(() => console.log("Daily routine saved!"));
+wash.save().then(() => console.log('wash saved'));
 
 mongoose.connection.close();
