@@ -4,36 +4,36 @@ var Schema = mongoose.Schema;
 // Use native promises
 mongoose.Promise = global.Promise;
 
-var TaskSchema = new Schema({
+const TaskSchema = new Schema({
   name: String,
   details: String,
   time: String
 });
 
-var TechSchema = new Schema({
+const TechSchema = new Schema({
   name: String,
   details: String,
   time: String
 });
 
-var DailySchema = new Schema({
+const DailySchema = new Schema({
   name: String,
   tasks: [TaskSchema]
 });
 
-var TechniqueSchema = new Schema({
+const TechniqueSchema = new Schema({
   name: String,
   techniques: [TechSchema]
 });
 
-var TaskModel = mongoose.model("Task", TaskSchema);
-var TechModel = mongoose.model("Tech", TechSchema);
-var DailyModel = mongoose.model("Daily", DailySchema);
-var TechniqueModel = mongoose.model("Technique", TechniqueSchema);
+const Task = mongoose.model("Task", TaskSchema);
+const Tech = mongoose.model("Tech", TechSchema);
+const Daily = mongoose.model("Daily", DailySchema);
+const Technique = mongoose.model("Technique", TechniqueSchema);
 
 module.exports = {
-  Task: TaskSchema,
-  Tech: TechSchema,
-  Daily: DailySchema,
-  Technique: TechniqueSchema
+  Task,
+  Tech,
+  Daily,
+  Technique
 };

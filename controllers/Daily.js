@@ -1,5 +1,5 @@
 const express = require('express');
-const Game = require('../models/daily');
+const Daily = require('../models/daily');
 const router = express.Router();
 
 router.get("/", (req,res) => {

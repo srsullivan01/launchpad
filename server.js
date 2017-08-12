@@ -2,7 +2,10 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const DailyController = require('./controllers/daily');
+const TaskController = require('./controllers/task');
 const app = express();
+
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI);
 
@@ -22,8 +25,8 @@ app.get('/', (req,res) => {
   res.send('Hello world!')
 });
 
-// app.use('/api/daily', DailyController);
-
+app.use('/api/daily', DailyController);
+app.use('/api/task', TaskController);
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log("Magic happening on port " + PORT);
