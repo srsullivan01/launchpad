@@ -1,12 +1,14 @@
-import React { Component } from "react";
+import React, { Component } from "react";
 import axios from 'axios';
 
 class Task extends Component {
-  response(){
-    render(
+  render(){
+    return(
       <div>
         Hello from task
       </div>
     )
   }
 }
+
+export default Task;

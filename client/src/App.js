@@ -7,10 +7,10 @@ class App extends Component {
   render() {
     return (
       <Router>
-      <div>
-        <Route exact path="/" component={Home} />
-      </div>
-    </Router>
+        <div>
+          <Route exact path="/" component={Home} />
+        </div>
+      </Router>
     );
   }
 }

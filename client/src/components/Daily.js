@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Task from './task';
+import Task from './Task';
 
 class Daily extends Component {
   constructor(){
     super();
     this.state = {
       id: "",
-      // user: "",
+      user: "",
       tasks: []
     }
   }
   componentWillMount(){
    const id = this.props.match.params.gameId;
-   axios.get(`/api/game/${id}`).then(res => {
+   axios.get(`/api/daily/${id}`).then(res => {
      this.setState({
        id: res.data._id,
-      //  user: res.data.user,
+       user: res.data.user,
        tasks: res.data.tasks
      });
    });
