@@ -59,18 +59,18 @@ const pressure = new Tech({
 const breathe = new Tech({
   name: "Four by Four Breathing",
   details: "Take a deep breath, counting to four as you breathe in. Hold it for a count of four. Blow the breath out slowly, to a count of four. Keep your lungs empty for another count of four. Repeat this a few times to help slow down your heart rate.",
-  Time: "Small"
+  time: "Small"
 });
 
 const leave = new Tech({
   name: "Take a Time Out",
   details: "If you feel like the situation is too much for you to handle right now, it can be helpful to walk away for a few minutes. If you can, get up and go outside or just leave the room. Walk around, listen to your favorite song, or do something else unrelated to the situation you're struggling with. Try checking back with what was frustrating you in fifteen minutes.",
-  Time: "Medium"
+  time: "Medium"
 });
 
 const example = new Daily({
   name: "Example Routine",
-  Tasks: [wash, eat, tidy, pets]
+  tasks: [wash, eat, tidy, pets]
 });
 
 example.save().then(() => console.log("Daily routine saved!"));

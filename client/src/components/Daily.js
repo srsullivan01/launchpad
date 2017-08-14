@@ -4,7 +4,8 @@ import Task from './task';
 class Daily extends Component {
   render(){
     return(
-      <div>Hello from Daily
+      <div>
+        Hello from Daily
       <Task />
     </div>
     )
