@@ -26,7 +26,7 @@ app.use(express.static(__dirname + '/client/build'));
 app.use('/api/daily', DailyController);
 app.use('/api/task', TaskController);
 app.get('/', (req,res) => {
-  res.sendFile(__dirname + "/client/build/index.html");
+  res.sendFile(__dirname + "/client/public/index.html");
 });
 
 const PORT = process.env.PORT || 3001;

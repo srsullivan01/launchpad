@@ -70,10 +70,11 @@ const leave = new Tech({
 
 const example = new Daily({
   name: "Example Routine",
+  user: "Steve",
   tasks: [wash, eat, tidy, pets]
 });
 
 example.save().then(() => console.log("Daily routine saved!"));
-wash.save().then(() => console.log('wash saved'));
+
 
 mongoose.connection.close();

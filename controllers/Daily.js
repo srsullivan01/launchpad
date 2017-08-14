@@ -8,12 +8,18 @@ router.get("/", (req,res) => {
   })
 });
 
-router.get("/:id", (req,res) => {
-  Daily.findById(req.params.id).then((daily) => {
-    res.json(daily);
+router.post("/", (req, res) => {
+  const Daily = new Daily();
+  newDaily.name = req.body.daily.name;
+
+  const newTasks = req.body.daily.tasks.map((task) => {
+    return new Task(category);
   });
-});
+  newDaily.tasks = newTasks;
 
-
+  newDaily.save().then((daily) => {
+    res.json(daily);
+  }).catch(err => console.log(err));
+})
 
 module.exports = router;

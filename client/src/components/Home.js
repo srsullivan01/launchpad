@@ -13,8 +13,15 @@ render(){
   return(
     <div>
       <h1>LAUNCHPAD</h1>
-      Hello from home
-    <Daily />
+      <button>Beans</button>
+    </div>
+    {this.state.daily.map((daily, i) => (
+      <div key={i}>
+        <Link to={`/daily/${daily._id}`}>
+          {daily.user}'s Daily Tasks
+        </Link>
+      </div>
+    ))}
     </div>
   )
 }
