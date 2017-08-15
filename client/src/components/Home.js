@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import axios from "axios";
+import Daily from './Daily';
 
 
 class Home extends Component {
@@ -34,7 +35,7 @@ class Home extends Component {
             return(
               <li key={i}>
                 <Link to={`/daily/${daily._id}`}>
-                {daily.user}'s Daily Tasks
+                {daily.user}'s Daily Routine
               </Link>
             </li>
           );

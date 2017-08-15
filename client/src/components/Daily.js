@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import Task from './Task';
+import { Link, Redirect } from "react-router-dom";
 
 class Daily extends Component {
   constructor(){
@@ -12,8 +13,12 @@ class Daily extends Component {
     }
   }
   componentWillMount(){
-   const id = this.props.match.params.gameId;
-   axios.get(`/api/daily/${id}`).then(res => {
+  console.log("mounting");
+   const id = this.props.match.params.dailyId;
+   console.log(id)
+   axios.get(`/api/daily/${id}`)
+    .then(res => {
+     console.log(res)
      this.setState({
        id: res.data._id,
        user: res.data.user,
@@ -23,10 +28,14 @@ class Daily extends Component {
  }
 
   render(){
+    const allTasks = this.state.tasks.map((task, i) =>{
+      return <Task key={i} task={task} />
+    })
     return(
       <div>
         <h1>Daily Tasks:</h1>
-      <Task tasks={this.state.tasks} />
+        {allTasks}
+        <Link to={`/addTask`} >Add New Task</Link>
     </div>
     )
   }

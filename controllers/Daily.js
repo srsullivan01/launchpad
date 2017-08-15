@@ -8,8 +8,16 @@ router.get("/", (req,res) => {
   })
 });
 
+router.get("/:id", (req, res) => {
+  console.log('post route hit')
+  Daily.findById(req.params.id).then(daily => {
+    console.log(daily)
+    res.json(daily);
+  })
+});
+
 router.post("/", (req, res) => {
-  const Daily = new Daily();
+  const Daily = new Daily(dailyId);
   newDaily.name = req.body.daily.name;
 
   const newTasks = req.body.daily.tasks.map((task) => {
