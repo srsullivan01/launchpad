@@ -5,6 +5,7 @@ import Daily from './components/Daily';
 import Task from './components/Task';
 import AddTask from './components/AddTask';
 // import NavBar from './styles/NavBar';
+require('dotenv').config();
 
 class App extends Component {
   render() {
