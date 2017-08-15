@@ -17,11 +17,11 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  const Daily = new Daily(dailyId);
+  const newDaily = new Daily();
   newDaily.name = req.body.daily.name;
 
   const newTasks = req.body.daily.tasks.map((task) => {
-    return new Task(category);
+    return new Task(daily);
   });
   newDaily.tasks = newTasks;
 

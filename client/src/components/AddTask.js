@@ -27,8 +27,9 @@ _changeDetails = e => {
 
 _handleSubmit = (e) => {
   e.preventDefault();
-  axios.post("/daily/:dailyId", this.state).then((res) => {
-    console.log("it worked!");
+  axios.post(`/api/task/${this.props.dailyId}/new`, this.state).then((res) => {
+    console.log(res);
+    this.props.updateDaily(res.data)
   })
   .catch(err => console.log(err));
 };
@@ -36,10 +37,11 @@ _handleSubmit = (e) => {
 
 
 render(){
+  console.log(this.props.dailyId)
 return (
       <div>
         <h1>Add A Task</h1>
-        <form onSubmit={this._handleSubmit}>
+        <form onSubmit= {(e) => {this._handleSubmit(e)}}>
           <div>
             <label htmlFor="name">Task Name: </label>
             <input
@@ -55,6 +57,12 @@ return (
               type="text"
               name="details"
             />
+            <label htmlFor="time">Time Commitment: </label>
+            <select>
+              <option value="short">Short</option>
+              <option value="medium">Medium</option>
+              <option value="long">Long</option>
+            </select>
           </div>
           <button>Add Task</button>
         </form>
