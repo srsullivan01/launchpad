@@ -49,12 +49,12 @@ _handleDelete = (index) => {
       return <Task key={i} id={i} task={task} dailyId={task.dailyId} handleDelete={this._handleDelete}/>
     })
     return(
-      <div>
+      <dailyContainer>
         <h1>Daily Tasks:</h1>
         {allTasks}
         <AddTask dailyId={this.state.id} updateDaily={this._updateDaily} />
 
-    </div>
+    </dailyContainer>
     )
   }
 }
