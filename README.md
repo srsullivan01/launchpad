@@ -20,15 +20,15 @@ Launchpad is an application built to help people with <a href="https://www.headw
 <br /> <br/>
 
 <h3>User Stories:</h3>
-  * GIVEN: I am on the landing page,
-    WHEN: I click to access dailies,
-    THEN: I can view a pre-populated list of simple self-care tasks
-  * GIVEN: I am viewing my daily tasks,
-    WHEN: I am finished with a task,
-    THEN: I can click 'all done' to remove the task from the list
-  * GIVEN: I am viewing my daily tasks,
-    WHEN: I need to add a new task
-    THEN: I can use the form to add a new task, details about it, and an estimated time commitment.
+  * GIVEN: I am on the landing page, <br/>
+    WHEN: I click to access dailies, <br/>
+    THEN: I can view a pre-populated list of simple self-care tasks <br/>
+  * GIVEN: I am viewing my daily tasks, <br/>
+    WHEN: I am finished with a task, <br/>
+    THEN: I can click 'all done' to remove the task from the list <br/>
+  * GIVEN: I am viewing my daily tasks, <br/>
+    WHEN: I need to add a new task <br/>
+    THEN: I can use the form to add a new task, details about it, and an estimated time commitment. <br/>
 <br /><br />
 
 <h3> Stretch Goals </h3>
@@ -37,10 +37,10 @@ Launchpad is an application built to help people with <a href="https://www.headw
 <br /><br />
 
 <h3>File Structures</h3>
-  * Client -> public, src -> components, images, styles
-  * controllers -> addTask, daily, task
-  * db -> schema, seeds
-  * models -> daily, task, tech, technique
+  * Client -> public, src -> components, images, styles <br/>
+  * controllers -> addTask, daily, task <br/>
+  * db -> schema, seeds <br/>
+  * models -> daily, task, tech, technique <br/>
 <br /><br />
 
 <h3>Resources Used </h3>
