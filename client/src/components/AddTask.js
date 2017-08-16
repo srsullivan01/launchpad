@@ -10,6 +10,7 @@ class AddTask extends Component{
       task: {
         name: "",
         details: ""
+
       }
     }
   };

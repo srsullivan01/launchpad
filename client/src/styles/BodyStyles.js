@@ -26,7 +26,7 @@ export const TaskContainer = styled.div`
   border-radius: 3%;
   padding: 10px;
   margin: 20px;
-  background-color: rgba(104, 104, 104, 0.09);
+  background-color: rgba(255, 255, 255, 0.6);
 `;
 export const Button = styled.button`
   border-radius: 3px;

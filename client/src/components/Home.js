@@ -22,6 +22,11 @@ class Home extends Component {
     });
   }
 
+_changeName = e => {
+  const newState = {...this.state };
+  newState.daily.user = e.target.value;
+  this.setState(newState);
+}
 
 
   render(){
@@ -29,7 +34,7 @@ class Home extends Component {
 
       <LandingPage>
         <Header1>LAUNCHPAD</Header1>
-        <form>
+        <form onSubmit = {(e) => {this._changeName(e)}}>
           <input type="text"/>
           <Button>New User</Button>
         </form>
@@ -44,6 +49,7 @@ class Home extends Component {
           );
         })}
       </ul>
+       <a href="http://calmingmanatee.com/25"><Button>MANATEE</Button></a>
     </LandingPage>
 
   );

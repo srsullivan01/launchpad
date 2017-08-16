@@ -1,4 +1,4 @@
-:airplane: <h1>launchpad</h1> :airplane:
+:airplane: <h1>launchpad</h1>
 
 <h3>App Overview</h3>
 Launchpad is an application built to help people with <a href="https://www.headway.org.uk/about-brain-injury/individuals/effects-of-brain-injury/executive-dysfunction/">executive dysfunction </a> manage daily chores and self-care.
@@ -11,7 +11,7 @@ Launchpad is an application built to help people with <a href="https://www.headw
 Unresolved Features:
 User Stories:
 ##Stretch Goals
-  * Calming Manatee page
+  * Calming Manatee page <br/>
   * Retain username and password
 ##File Structures:
 
