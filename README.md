@@ -15,7 +15,7 @@ Launchpad is an application built to help people with <a href="https://www.headw
 <a href="https://ibb.co/album/jwca8v"> More WireFrames </a>
 <br /><br />
 
-<h3>Unresolved Features:<h3>
+<h3>Unresolved Features:</h3>
   * Username does not currently populate
 <br /> <br/>
 
@@ -44,5 +44,5 @@ Launchpad is an application built to help people with <a href="https://www.headw
 <br /><br />
 
 <h3>Resources Used </h3>
-  * MERN
+  * MERN <br />
   * <a href="http://philome.la/jace_harr/you-feel-like-shit-an-interactive-self-care-guide/play"> YFLS </a>
