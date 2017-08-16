@@ -2,8 +2,8 @@ require("dotenv").config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const DailyController = require('./controllers/daily');
-const TaskController = require('./controllers/task');
+const DailyController = require('./controllers/daily.js');
+const TaskController = require('./controllers/task.js');
 const app = express();
 
 mongoose.Promise = global.Promise;
