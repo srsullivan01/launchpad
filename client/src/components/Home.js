@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
+import { LandingPage, Button, Header1 } from '../styles/BodyStyles';
 import axios from "axios";
 import Daily from './Daily';
+
 
 
 class Home extends Component {
@@ -24,11 +26,12 @@ class Home extends Component {
 
   render(){
     return (
-      <div>
-        <h1>LAUNCHPAD</h1>
+
+      <LandingPage>
+        <Header1>LAUNCHPAD</Header1>
         <form>
           <input type="text"/>
-          <button>New User</button>
+          <Button>New User</Button>
         </form>
         <ul>
           {this.state.daily.map((daily, i) => {
@@ -41,7 +44,8 @@ class Home extends Component {
           );
         })}
       </ul>
-    </div>
+    </LandingPage>
+
   );
 }
 }

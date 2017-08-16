@@ -3,6 +3,7 @@ import axios from 'axios';
 import Task from './Task';
 import AddTask from './AddTask';
 import { Link, Redirect } from "react-router-dom";
+import { DailyStyles, taskStyles, Header1 } from '../styles/BodyStyles';
 
 class Daily extends Component {
   constructor(){
@@ -38,23 +39,22 @@ _handleDelete = (index) => {
   const newState = {...this.state};
   newState.tasks.splice(index, 1);
   this.setState(newState);
-  // axios.delete(`route that contains everything youre deleting`)
-  // .then ???same thing you did with reflesing for add?
+
 }
 
-//make api call to update user and update new tasks
+
 
   render(){
     const allTasks = this.state.tasks.map((task, i) =>{
       return <Task key={i} id={i} task={task} dailyId={task.dailyId} handleDelete={this._handleDelete}/>
     })
     return(
-      <dailyContainer>
-        <h1>Daily Tasks:</h1>
+      <DailyStyles>
+        <Header1>Daily Tasks</Header1>
         {allTasks}
         <AddTask dailyId={this.state.id} updateDaily={this._updateDaily} />
 
-    </dailyContainer>
+    </DailyStyles>
     )
   }
 }

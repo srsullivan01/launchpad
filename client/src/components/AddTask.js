@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { TaskStyles, Button, Header1, AddTaskStyles } from '../styles/BodyStyles';
 
 
 class AddTask extends Component{
@@ -39,8 +40,8 @@ _handleSubmit = (e) => {
 render(){
   console.log(this.props.dailyId)
 return (
-      <div>
-        <h1>Add A Task</h1>
+      <AddTaskStyles>
+        <Header1>Add A Task</Header1>
         <form onSubmit= {(e) => {this._handleSubmit(e)}}>
           <div>
             <label htmlFor="name">Task Name: </label>
@@ -50,13 +51,16 @@ return (
               type="text"
               name="name"
             />
+            <br /> <br />
             <label htmlFor="details">Task Details: </label>
             <input
               onChange={this._changeDetails}
               value={this.state.task.details}
               type="text"
               name="details"
+              id="DetailsText"
             />
+            <br /> <br />
             <label htmlFor="time">Time Commitment: </label>
             <select>
               <option value="short">Short</option>
@@ -64,9 +68,9 @@ return (
               <option value="long">Long</option>
             </select>
           </div>
-          <button>Add Task</button>
+          <Button>Add Task</Button>
         </form>
-      </div>
+      </AddTaskStyles>
       );
     };
   }

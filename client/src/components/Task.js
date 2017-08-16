@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from 'axios';
 import RemoveTask from './RemoveTask';
+import { taskStyles, Button, Header3, Header4, TaskContainer } from '../styles/BodyStyles';
+
 
 class Task extends Component {
   constructor(){
@@ -14,13 +16,14 @@ class Task extends Component {
 
   render(){
     return(
-      <div className= 'TaskContainer'>
-        <h3>{this.props.task.name}</h3>
+      <taskStyles>
+        <TaskContainer>
+        <Header3>{this.props.task.name}</Header3>
         {this.props.task.details} <br />
-        <h4>Time Commitment: {this.props.task.time} </h4>
-        <button onClick={() => this.props.handleDelete(this.props.id)}>All done! </button>
-
-      </div>
+        <Header4>Time Commitment: {this.props.task.time} </Header4>
+        <Button onClick={() => this.props.handleDelete(this.props.id)}>All done! </Button>
+          </TaskContainer>
+      </taskStyles>
     );
   };
 }
