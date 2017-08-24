@@ -3,7 +3,7 @@
 <h3>App Overview</h3>
 Launchpad is an application built to help people with <a href="https://www.headway.org.uk/about-brain-injury/individuals/effects-of-brain-injury/executive-dysfunction/">executive dysfunction </a> manage daily chores and self-care.
 <br />
-<a href="https://thawing-earth-33940.herokuapp.com/"> Heroku </a> |
+<a href="https://wdi-launchpad.herokuapp.com/"> Heroku </a> |
 <a href="https://trello.com/b/63BlA4RV/wdi-unit-3-project-launchpad"> Trello </a>
 <br /><br />
 <h3> WireFrames </h3>
