@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { LandingPage, Button, Header1 } from '../styles/BodyStyles';
+import { LandingPage, Button, Header1, LinkStyles, ManateeButton } from '../styles/BodyStyles';
 import axios from "axios";
 import Daily from './Daily';
 
@@ -29,6 +29,7 @@ _changeName = e => {
 }
 
 
+
   render(){
     return (
 
@@ -42,14 +43,14 @@ _changeName = e => {
           {this.state.daily.map((daily, i) => {
             return(
               <li key={i}>
-                <Link to={`/daily/${daily._id}`}>
+                <LinkStyles to={`/daily/${daily._id}`}>
                 {daily.user}'s Daily Routine
-              </Link>
+              </LinkStyles>
             </li>
           );
         })}
       </ul>
-       <a href="http://calmingmanatee.com/25"><Button>MANATEE</Button></a>
+       <a href="http://calmingmanatee.com/"><ManateeButton>MANATEE</ManateeButton></a>
     </LandingPage>
 
   );

@@ -33,9 +33,19 @@ export const Button = styled.button`
   padding: 0.25em 1em;
   margin: 0 1em;
   background: #ceeaff;
-  color: #197bc6;
+  color: #2E456D;
   border: 2px solid #197bc6;
 `;
+export const ManateeButton = styled.button`
+  border-radius: 3px;
+  padding: 0.25em 1em;
+  margin: 0 1em;
+  background:  #4F5A65;
+  color:  #1D0029;
+  border: none;
+  box-shadow: 0 9px #999;
+`;
+
 export const LandingPage = styled.div`
   display: flex;
   align-items: center;
@@ -44,17 +54,25 @@ export const LandingPage = styled.div`
   color: #010f19;
 `;
 export const Header1 = styled.h1`
-  font-family: "Verdana", Verdana, sans-serif;
-  color: #010f19;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  color: #1C2A43;
 `;
 export const Header3 =styled.h3`
-  font-family: "Verdana", Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #053c66;
 `;
 export const Header4 = styled.h4`
-  font-family: "Verdana", Verdana, sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: #064b7f;
 `;
 export const AddTaskStyles = styled.div`
   margin: 20px;
+`;
+
+export const LinkStyles = styled.a`
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #2E456D;
 `;

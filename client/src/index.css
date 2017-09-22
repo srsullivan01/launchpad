@@ -1,12 +1,12 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: #ceeaff;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-image: url("./clouds-sunset-sundown-sun-80399.jpeg");
+  background-image: url("./clouds.jpeg");
 }
 #DetailsText {
   min-height:50px;
