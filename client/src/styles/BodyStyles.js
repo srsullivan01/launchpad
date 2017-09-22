@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
 export const DailyStyles = styled.div`
   display: flex;
@@ -30,20 +31,40 @@ export const TaskContainer = styled.div`
 `;
 export const Button = styled.button`
   border-radius: 3px;
+  font-weight: bold;
   padding: 0.25em 1em;
+  height: 35px;
   margin: 0 1em;
-  background: #ceeaff;
-  color: #2E456D;
+  background: #2e5cb8;
+  color: #f0f0f5;
   border: 2px solid #197bc6;
+  box-shadow: 0 4px #999;
+  &:hover{
+    background-color: #193366;
+  };
+  &:active{
+    box-shadow: 0 2px #666;
+    background-color: #193366;
+    transform: translateY(4px);
+  }
 `;
 export const ManateeButton = styled.button`
   border-radius: 3px;
   padding: 0.25em 1em;
+  height: 35px;
   margin: 0 1em;
   background:  #4F5A65;
-  color:  #1D0029;
+  color:  #f0f0f5;
   border: none;
-  box-shadow: 0 9px #999;
+  box-shadow: 0 4px #999;
+  &:hover{
+    background-color:  #3d3d5c;
+  };
+  &:active{
+    box-shadow: 0 2px #666;
+    transform: translateY(4px);
+    background-color:  #3d3d5c;
+  }
 `;
 
 export const LandingPage = styled.div`
@@ -70,7 +91,7 @@ export const AddTaskStyles = styled.div`
   margin: 20px;
 `;
 
-export const LinkStyles = styled.a`
+export const LinkStyles = styled(Link)`
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
