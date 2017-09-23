@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link, Redirect } from "react-router-dom";
 import { LandingPage, Button, Header1, LinkStyles, ManateeButton } from '../styles/BodyStyles';
+import { StyledInput } from '../styles/FormStyles';
 import axios from "axios";
 import Daily from './Daily';
 
@@ -36,7 +37,7 @@ _changeName = e => {
       <LandingPage>
         <Header1>LAUNCHPAD</Header1>
         <form onSubmit = {(e) => {this._changeName(e)}}>
-          <input type="text"/>
+          <StyledInput type="text"/>
           <Button>New User</Button>
         </form>
         <ul>

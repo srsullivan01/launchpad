@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { TaskStyles, Button, Header1, AddTaskStyles } from '../styles/BodyStyles';
+import { StyledInput, StyledLabel, InputContainer, StyledTextArea } from '../styles/FormStyles';
 
 
 class AddTask extends Component{
@@ -44,17 +45,17 @@ return (
       <AddTaskStyles>
         <Header1>Add A Task</Header1>
         <form onSubmit= {(e) => {this._handleSubmit(e)}}>
-          <div>
-            <label htmlFor="name">Task Name: </label>
-            <input
+          <InputContainer>
+            <StyledLabel htmlFor="name">Task Name: </StyledLabel>
+            <StyledInput
               onChange={this._changeTask}
               value={this.state.task.name}
               type="text"
               name="name"
             />
             <br /> <br />
-            <label htmlFor="details">Task Details: </label>
-            <input
+            <StyledLabel htmlFor="details">Task Details: </StyledLabel>
+            <StyledTextArea
               onChange={this._changeDetails}
               value={this.state.task.details}
               type="text"
@@ -62,13 +63,13 @@ return (
               id="DetailsText"
             />
             <br /> <br />
-            <label htmlFor="time">Time Commitment: </label>
+            <StyledLabel htmlFor="time">Time Commitment: </StyledLabel>
             <select>
               <option value="short">Short</option>
               <option value="medium">Medium</option>
               <option value="long">Long</option>
             </select>
-          </div>
+          </InputContainer>
           <Button>Add Task</Button>
         </form>
       </AddTaskStyles>
